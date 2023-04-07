@@ -13,10 +13,10 @@ import java.util.List;
 
 public class CurrencyModelRun {
     public static void main(String[] args) {
-        List<CurrencyModel> currencyModels=getCurrencies();
-        for(CurrencyModel c: currencyModels){
+        for(CurrencyModel c: getCurrencies()){
             System.out.println(c.getName()+ " "+c.getCode()+ " "+c.getSymbol());
         }
+        CurrencyModelRun.getCurrenciesId().forEach(System.out::println);
 
     }
     public static List<CurrencyModel> getCurrencies(){
@@ -45,6 +45,15 @@ public class CurrencyModelRun {
             throw new RuntimeException(e);
         }
         return stringBuilder.toString();
+    }
+    //// napisz metodę zwracjącą kolekjcę Stringów z kolekcją samych currencyID, użyj metody getCurrencies
+
+    private static List<String> getCurrenciesId(){
+        List<String> currenciesID = new ArrayList<>();
+        for(CurrencyModel c:getCurrencies()) {
+            currenciesID.add(c.getCode());
+        }
+        return currenciesID;
     }
 }
 
