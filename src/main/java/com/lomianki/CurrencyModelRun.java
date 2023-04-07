@@ -18,7 +18,6 @@ public class CurrencyModelRun {
             System.out.println(c.getName()+ " "+c.getCode()+ " "+c.getSymbol());
         }
 
-
     }
     public static List<CurrencyModel> getCurrencies(){
         String baseURL = "http://localhost:3003/currencies";
