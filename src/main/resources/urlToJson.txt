@@ -1,0 +1,7 @@
+https://v6.exchangerate-api.com/v6/68e25a244e5c38d99944f3aa/latest/USD
+
+https://v6.exchangerate-api.com/v6/YOUR-API-KEY/pair/EUR/GBP
+
+https://v6.exchangerate-api.com/v6/68e25a244e5c38d99944f3aa/pair/EUR/GBP
+
+https://v6.exchangerate-api.com/v6/68e25a244e5c38d99944f3aa/pair/EUR/GBP
