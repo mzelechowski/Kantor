@@ -9,10 +9,12 @@ import java.io.InputStreamReader;
 import java.net.URL;
 
 public class CurrencyConverter {
+    private static final String API_KEY="68e25a244e5c38d99944f3aa";
+
     public static double convert(Currency from, Currency to) {
         StringBuilder stringBuilder = new StringBuilder();
         String value = "0.00";
-        String baseURL = "https://v6.exchangerate-api.com/v6/68e25a244e5c38d99944f3aa/pair/"
+        String baseURL = "https://v6.exchangerate-api.com/v6/"+ API_KEY+"/pair/"
                 + from.getName() + "/" + to.getName();
         try {
             URL url = new URL(baseURL);
@@ -25,7 +27,6 @@ public class CurrencyConverter {
             ObjectMapper objectMapper = new ObjectMapper();
             JsonNode jsonNode = objectMapper.readTree(stringBuilder.toString());
             value = jsonNode.get("conversion_rate").toString();
-            System.out.println(value);
         } catch (IOException e) {
             System.err.println(e.getMessage());
             System.out.println("Sprawdz czy działa server.");
