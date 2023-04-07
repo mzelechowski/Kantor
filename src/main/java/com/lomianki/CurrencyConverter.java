@@ -25,7 +25,7 @@ public class CurrencyConverter {
         return Double.parseDouble(value);
     }
 
-    public static String getResponse(String sourceURL) {
+    private static String getResponse(String sourceURL) {
         StringBuilder stringBuilder = new StringBuilder();
         try {
             URL url = new URL(sourceURL);
