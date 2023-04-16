@@ -30,4 +30,13 @@ public class CurrencyModel {
         public String getCode() {
                 return code;
         }
+
+    @Override
+    public String toString() {
+        return "CurrencyModel{" +
+                "symbol='" + symbol + '\'' +
+                ", name='" + name + '\'' +
+                ", code='" + code + '\'' +
+                '}';
+    }
 }

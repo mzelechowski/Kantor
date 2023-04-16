@@ -17,6 +17,9 @@ public class CurrencyModelRun {
             System.out.println(c.getName()+ " "+c.getCode()+ " "+c.getSymbol());
         }
         CurrencyModelRun.getCurrenciesId().forEach(System.out::println);
+        for(CurrencyModel c: getCurrencies()){
+            System.out.println(c.toString());
+        }
 
     }
     public static List<CurrencyModel> getCurrencies(){

@@ -1,6 +1,8 @@
 package com.lomianki;
 
 
+import java.sql.ResultSet;
+
 public class Main {
     public static void main(String[] args) {
         CurrencyConverter.convert(Currency.USD, Currency.PLN);
